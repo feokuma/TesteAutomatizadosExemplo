@@ -15,7 +15,7 @@ namespace TestesAutomatizadosExemplo
             DataNascimento = dataNascimento.Date;
         }
 
-        public string NomeCompleto => string.Empty;
+        public string NomeCompleto => $"{Nome} {Sobrenome}";
 
         public bool ÉMaiorDeIdade => CalculaIdade() >= 18;
 
