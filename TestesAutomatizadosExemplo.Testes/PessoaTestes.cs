@@ -34,6 +34,19 @@ namespace TestesAutomatizadosExemplo.Testes
         }
 
         [Test]
+        public void NomeCompletoDeveRetonarStringComNomeEspaçoSobrenome()
+        {
+            var nome = "Fernando";
+            var sobrenome = "Okuma";
+            var nomeCompletoEsperado = nome + " " + sobrenome;
+            var pessoa = new Pessoa(nome, sobrenome, DateTime.Now);
+
+            var nomeCompletoDaPessoa = pessoa.NomeCompleto;
+
+            Assert.AreEqual(nomeCompletoDaPessoa, nomeCompletoEsperado);
+        }
+
+        [Test]
         public void ÉMaiorDeIdadeDeveRetornarTrueQuandoDiferençaEntreDataAtualEDataNascimentoForMaiorOuIgualADezoitoAnos()
         {
             // configura
